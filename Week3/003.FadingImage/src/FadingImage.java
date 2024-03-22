@@ -57,11 +57,11 @@ public class FadingImage extends Application {
         draw(g2d);
     }
 
-
+    //go fullscreen for full effect
     public void draw(FXGraphics2D graphics) {
         graphics.setTransform(new AffineTransform());
         graphics.setBackground(Color.white);
-        graphics.scale(2, 2);
+        graphics.scale(1, 1);
         graphics.clearRect(0, 0, (int)canvas.getWidth(), (int)canvas.getHeight());
 
         graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1));

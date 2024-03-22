@@ -18,10 +18,26 @@ public class Rainbow extends Application {
         primaryStage.setTitle("Rainbow");
         primaryStage.show();
     }
-    
-    
-    public void draw(FXGraphics2D graphics) {
 
+
+    public void draw(FXGraphics2D graphics) {
+        graphics.translate(1920/2, 1000);
+        graphics.scale(1,-1);
+        float radiusBinnen = 700;
+        float radiusBuiten = 500;
+        float step = 10000f;
+
+
+        for (int i = 0; i < step; i++) {
+            graphics.setColor(Color.getHSBColor(i/step, 1, 1));
+            double cos = Math.cos( i/step * Math.PI);
+            double sin = Math.sin( i/step * Math.PI);
+            double x1 = radiusBinnen * cos;
+            double y1 = radiusBinnen * sin;
+            double x2 = radiusBuiten * cos;
+            double y2 = radiusBuiten * sin;
+            graphics.draw(new Line2D.Double(x1,y1,x2,y2));
+        }
     }
     
     

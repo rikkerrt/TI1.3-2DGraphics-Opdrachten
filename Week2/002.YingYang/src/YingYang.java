@@ -28,7 +28,7 @@ public class YingYang extends Application {
         draw(new FXGraphics2D(canvas.getGraphicsContext2D()));
     }
 
-
+    //go fullscreen for full effect
     public void draw(FXGraphics2D graphics) {
         GeneralPath path1 = new GeneralPath();
 

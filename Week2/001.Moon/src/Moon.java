@@ -28,11 +28,18 @@ public class Moon extends Application {
     }
 
 
-    public void draw(FXGraphics2D graphics)
-    {
+    public void draw(FXGraphics2D graphics) {
         graphics.setTransform(new AffineTransform());
         graphics.setBackground(Color.white);
         graphics.clearRect(0, 0, (int) canvas.getWidth(), (int) canvas.getHeight());
+        Area moonBase = new Area(new Ellipse2D.Double(250,250,100,100));
+        Area circleForGap = new Area(new Ellipse2D.Double(220,250,100,100));
+
+        Area moon = new Area(moonBase);
+        Area subtract = new Area(circleForGap);
+        moon.subtract(subtract);
+        graphics.setColor(Color.black);
+        graphics.fill(moon);
     }
 
 

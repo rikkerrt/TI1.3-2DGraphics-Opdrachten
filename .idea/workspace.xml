@@ -5,32 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week3/004.Spotlight/res/image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week3/005.Screensaver/src/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/catapult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/pig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/red_bird.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/wood_block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/002.MovingCharacter/images/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week3/003.FadingImage/res/image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week3/003.FadingImage/res/image2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week2/004.GradientPaint/src/GradientPaintExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/004.GradientPaint/src/GradientPaintExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/001.Rainbow/src/Rainbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/001.Rainbow/src/Rainbow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/002.MovingCharacter/002.MovingCharacter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/002.MovingCharacter/002.MovingCharacter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/002.MovingCharacter/src/MovingCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/002.MovingCharacter/src/MovingCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/003.FadingImage/003.FadingImage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/003.FadingImage/003.FadingImage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week1/004.Rainbow/src/Rainbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week1/004.Rainbow/src/Rainbow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/001.Moon/src/Moon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/001.Moon/src/Moon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/002.YingYang/src/YingYang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/002.YingYang/src/YingYang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/004.Spotlight/004.Spotlight.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/004.Spotlight/004.Spotlight.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/004.Spotlight/src/Spotlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/004.Spotlight/src/Spotlight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/005.Screensaver/src/Screensaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/005.Screensaver/src/Screensaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/001.Verlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/001.Verlet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/DistanceConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/DistanceConstraint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/Particle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/PositionConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/PositionConstraint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/VerletEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/VerletEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/001.AngryBirds/001.AngryBirds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/001.AngryBirds.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +48,17 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.AngryBirds.executor": "Run",
     "Application.BlockDrag.executor": "Run",
+    "Application.Colors.executor": "Run",
     "Application.FadingImage.executor": "Run",
     "Application.GradientPaintExercise.executor": "Run",
+    "Application.Graph.executor": "Run",
+    "Application.House.executor": "Run",
     "Application.Mirror.executor": "Run",
+    "Application.Moon.executor": "Run",
     "Application.MovingCharacter.executor": "Run",
     "Application.Rainbow.executor": "Run",
     "Application.Screensaver.executor": "Run",
+    "Application.Spiral.executor": "Run",
     "Application.Spirograph.executor": "Run",
     "Application.Spotlight.executor": "Run",
     "Application.VerletEngine.executor": "Run",
@@ -111,7 +98,7 @@
       <command value="zoom" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.AngryBirds">
+  <component name="RunManager">
     <configuration name="AngryBirds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AngryBirds" />
       <module name="001.AngryBirds" />
@@ -175,6 +162,7 @@
       <workItem from="1710790436335" duration="2943000" />
       <workItem from="1711036086542" duration="5796000" />
       <workItem from="1711106232916" duration="9530000" />
+      <workItem from="1711116593443" duration="864000" />
     </task>
     <servers />
   </component>
