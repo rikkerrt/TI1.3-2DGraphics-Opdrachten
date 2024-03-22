@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Week3/004.Spotlight/res/image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week3/005.Screensaver/src/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/catapult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/pig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/red_bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/res/wood_block.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/002.MovingCharacter/images/sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/004.GradientPaint/src/GradientPaintExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/004.GradientPaint/src/GradientPaintExercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/001.Rainbow/src/Rainbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/001.Rainbow/src/Rainbow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/002.MovingCharacter/002.MovingCharacter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/002.MovingCharacter/002.MovingCharacter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/002.MovingCharacter/src/MovingCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/002.MovingCharacter/src/MovingCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/003.FadingImage/003.FadingImage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/003.FadingImage/003.FadingImage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/004.Spotlight/004.Spotlight.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/004.Spotlight/004.Spotlight.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/004.Spotlight/src/Spotlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/004.Spotlight/src/Spotlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week3/005.Screensaver/src/Screensaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/005.Screensaver/src/Screensaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/001.Verlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/001.Verlet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/DistanceConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/DistanceConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/Particle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/PositionConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/PositionConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/src/VerletEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/src/VerletEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/001.AngryBirds/001.AngryBirds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/001.AngryBirds.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2bs2L2bKZzkGevAxDPvMiPx9fS6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.AngryBirds.executor": "Run",
+    "Application.BlockDrag.executor": "Run",
+    "Application.FadingImage.executor": "Run",
+    "Application.GradientPaintExercise.executor": "Run",
+    "Application.Mirror.executor": "Run",
+    "Application.MovingCharacter.executor": "Run",
+    "Application.Rainbow.executor": "Run",
+    "Application.Screensaver.executor": "Run",
+    "Application.Spirograph.executor": "Run",
+    "Application.Spotlight.executor": "Run",
+    "Application.VerletEngine.executor": "Run",
+    "Application.YingYang.executor": "Run",
+    "Application.testGraph.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/huiswerk/Jaar1.5/p3/2D/2d/2d/Week4/001.Verlet/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week4\001.Verlet\src" />
+      <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week3\004.Spotlight\res" />
+      <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week3\004.Spotlight\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week4\001.Verlet\res" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="zoom" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AngryBirds">
+    <configuration name="AngryBirds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AngryBirds" />
+      <module name="001.AngryBirds" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FadingImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FadingImage" />
+      <module name="003.FadingImage" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GradientPaintExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GradientPaintExercise" />
+      <module name="004.GradientPaint" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovingCharacter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MovingCharacter" />
+      <module name="002.MovingCharacter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AngryBirds" />
+        <item itemvalue="Application.FadingImage" />
+        <item itemvalue="Application.MovingCharacter" />
+        <item itemvalue="Application.GradientPaintExercise" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="" />
+      <created>1706989406096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706989406096</updated>
+      <workItem from="1708952554170" duration="8951000" />
+      <workItem from="1709059688416" duration="1471000" />
+      <workItem from="1709562296203" duration="12168000" />
+      <workItem from="1709728957616" duration="1919000" />
+      <workItem from="1709823402916" duration="537000" />
+      <workItem from="1710147260982" duration="1777000" />
+      <workItem from="1710450214596" duration="5340000" />
+      <workItem from="1710790436335" duration="2943000" />
+      <workItem from="1711036086542" duration="5796000" />
+      <workItem from="1711106232916" duration="9530000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

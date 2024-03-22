@@ -14,10 +14,11 @@ import org.jfree.fx.ResizableCanvas;
 
 public class Rainbow extends Application {
     private ResizableCanvas canvas;
+    private Color[] rainbowColors;
 
     @Override
-    public void start(Stage stage) throws Exception
-    {
+    public void start(Stage stage) throws Exception {
+        rainbowColors = new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.MAGENTA, Color.RED, Color.ORANGE};
         BorderPane mainPane = new BorderPane();
         canvas = new ResizableCanvas(g -> draw(g), mainPane);
         mainPane.setCenter(canvas);
@@ -28,16 +29,34 @@ public class Rainbow extends Application {
     }
 
 
-    public void draw(FXGraphics2D graphics)
-    {
+    public void draw(FXGraphics2D graphics) {
         graphics.setTransform(new AffineTransform());
         graphics.setBackground(Color.white);
-        graphics.clearRect(0, 0, (int) canvas.getWidth(), (int) canvas.getHeight());
+        graphics.clearRect(0, 0, (int) canvas.getWidth(), (int) canvas.getHeight() / 2);
+        graphics.scale(2, 2);
+
+        AffineTransform transform = new AffineTransform();
+        transform.translate(canvas.getWidth() / 2 - 155, canvas.getHeight() - 300);
+        transform.rotate(Math.toRadians(242.0f));
+        transform.translate(0, -100);
+        Font font = new Font("SansSerif", Font.PLAIN, 50);
+        String tekst = "Regenboog";
+
+        for (int i = 0; i < tekst.length(); i++) {
+            graphics.setColor(rainbowColors[i]);
+
+            transform.translate(0, 100);
+            transform.rotate(Math.toRadians((double) 180 / (tekst.length() - 1)));
+
+            transform.translate(0, -100);
+            Shape shape = font.createGlyphVector(graphics.getFontRenderContext(), tekst.substring(i, i + 1)).getOutline();
+            graphics.fill(transform.createTransformedShape(shape));
+        }
+
     }
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         launch(Rainbow.class);
     }
 
