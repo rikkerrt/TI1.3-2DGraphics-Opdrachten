@@ -100,6 +100,7 @@ public class AngryBirds extends Application {
         String imagePath = "/wood_block.png";
         double woodBlockWidth = 0.2;
         this.inFlight = false;
+
         world = new World();
         world.setGravity(new Vector2(0, -9.8));
 

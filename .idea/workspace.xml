@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week3/003.FadingImage/res/image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week3/003.FadingImage/res/image2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eindopdracht/res/mainship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eindopdracht/src/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week1/004.Rainbow/src/Rainbow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week1/004.Rainbow/src/Rainbow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week2/001.Moon/src/Moon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/001.Moon/src/Moon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week2/002.YingYang/src/YingYang.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/002.YingYang/src/YingYang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week3/003.FadingImage/src/FadingImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/001.Verlet/res/saves.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eindopdracht/Eindopdracht.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/Eindopdracht.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/001.AngryBirds/src/AngryBirds.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
     "Application.AngryBirds.executor": "Run",
     "Application.BlockDrag.executor": "Run",
     "Application.Colors.executor": "Run",
+    "Application.Eindopdracht.executor": "Debug",
     "Application.FadingImage.executor": "Run",
     "Application.GradientPaintExercise.executor": "Run",
     "Application.Graph.executor": "Run",
@@ -70,7 +69,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/huiswerk/Jaar1.5/p3/2D/2d/2d/Week4/001.Verlet/src",
+    "last_opened_file_path": "D:/huiswerk/Jaar1.5/p3/OGP/Tentamen OGP2 18-19 eerste kans - Student",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,16 +91,26 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week4\001.Verlet\res" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="zoom" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AngryBirds">
     <configuration name="AngryBirds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AngryBirds" />
       <module name="001.AngryBirds" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Eindopdracht" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Eindopdracht" />
+      <module name="Eindopdracht" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,6 +138,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Eindopdracht" />
         <item itemvalue="Application.AngryBirds" />
         <item itemvalue="Application.FadingImage" />
         <item itemvalue="Application.MovingCharacter" />
@@ -163,6 +173,10 @@
       <workItem from="1711036086542" duration="5796000" />
       <workItem from="1711106232916" duration="9530000" />
       <workItem from="1711116593443" duration="864000" />
+      <workItem from="1711146205049" duration="1156000" />
+      <workItem from="1711197677616" duration="6856000" />
+      <workItem from="1711320244853" duration="16000" />
+      <workItem from="1711364169674" duration="74000" />
     </task>
     <servers />
   </component>
@@ -171,5 +185,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Common/src/MousePicker.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TI1_3_2DGraphics_Opdrachten$Eindopdracht.ic" NAME="Eindopdracht Coverage Results" MODIFIED="1711200255131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
