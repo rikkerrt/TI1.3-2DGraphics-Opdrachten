@@ -1,3 +1,4 @@
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -7,102 +8,113 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.dyn4j.dynamics.DetectResult;
 import org.dyn4j.geometry.*;
-import org.jfree.fx.FXGraphics2D;
-import org.jfree.fx.ResizableCanvas;
+import org.dyn4j.geometry.Rectangle;
+import org.jfree.fx.*;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.dyn4j.dynamics.Body;
-import org.dyn4j.dynamics.Force;
 import org.dyn4j.dynamics.World;
 import org.jfree.fx.FXGraphics2D;
 import org.jfree.fx.ResizableCanvas;
 
-
-public class Eindopdracht extends Application {
+public class Eindopdracht extends Application implements Resizable {
     private ResizableCanvas canvas;
     private ArrayList<GameObject> gameObjects = new ArrayList<>();
     private boolean debugSelected;
     private World world;
     private Camera camera;
+    private MousePicker mousePicker;
+    private FXGraphics2D g2d;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        BorderPane mainPane = new BorderPane();
+    public void start(Stage stage) throws Exception {
+        BorderPane borderPane = new BorderPane();
 
-        // Add debug button
-        javafx.scene.control.CheckBox showDebug = new CheckBox("Show debug");
+        //add debug (show hitboxes)
+        CheckBox showDebug = new CheckBox("Show Debug");
 
-        showDebug.setOnAction(e -> {
-            debugSelected = showDebug.isSelected();
+        showDebug.setOnAction(e-> {
+            debugSelected =  showDebug.isSelected();
         });
 
-        Button resetButton = new Button("Reset");
-        resetButton.setOnAction(event -> {
-//            this.init();
-        });
+        borderPane.setTop(showDebug);
 
-        HBox hBox = new HBox();
-        hBox.getChildren().addAll(showDebug, resetButton);
+        canvas = new ResizableCanvas(e -> draw(e), borderPane);
+        g2d = new FXGraphics2D(canvas.getGraphicsContext2D());
 
-        mainPane.setTop(hBox);
+        borderPane.setCenter(canvas);
 
-        canvas = new ResizableCanvas(g -> draw(g), mainPane);
+        camera = new Camera(canvas, this, g2d);
+        mousePicker = new MousePicker(canvas);
 
-        mainPane.setCenter(canvas);
-        FXGraphics2D g2d = new FXGraphics2D(canvas.getGraphicsContext2D());
-        camera = new Camera(canvas, g -> draw(g), g2d);
-
-        canvas.setOnMousePressed(event -> {
-            MousePicker mousePicker = new MousePicker(canvas);
-            AffineTransform tx = new AffineTransform();
-            tx.translate(event.getX(), event.getY());
-
-            mousePicker.update(world, tx, 1);
-
-        });
-
-        Stage stage = new Stage();
-        stage.setScene(new Scene(mainPane, 1920, 1080));
-        stage.setTitle("Angry Birds");
+        stage.setScene(new Scene(borderPane, 1920, 1080));
+        stage.setTitle("Hello Joints");
         stage.show();
-        draw(g2d);
-    }
 
+        new AnimationTimer() {
+            long last = -1;
+
+            @Override
+            public void handle(long now) {
+                if (last == -1)
+                    last = now;
+                update((now - last) / 1.0e9);
+                last = now;
+                draw(g2d);
+            }
+        }.start();
+    }
 
     public void init() {
         world = new World();
-        world.setGravity(new Vector2(9.8));
+        world.setGravity(new Vector2(0, 0));
+
+        Body floor = new Body();
+        floor.addFixture(new Rectangle(20, 1));
+        floor.getTransform().setTranslation(0, -10);
+        floor.setMass(MassType.INFINITE);
+        world.addBody(floor);
 
         Body mainShip = new Body();
         mainShip.addFixture(Geometry.createRectangle(4.75, 5.5));
         mainShip.getTransform().setTranslation(0, -4.6);
-        mainShip.setMass(MassType.INFINITE);
+        mainShip.setMass(MassType.NORMAL);
         world.addBody(mainShip);
         gameObjects.add(new GameObject("mainship.png", mainShip, new Vector2(0, 0), 1));
     }
 
-    private void draw(FXGraphics2D g) {
-        g.setTransform(new AffineTransform());
-        g.clearRect(0, 0, (int) canvas.getWidth(), (int) canvas.getHeight());
-
-        AffineTransform originalTransform = g.getTransform();
-
-        g.setTransform(camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()));
-        g.scale(1, -1);
-
-        for (GameObject go : gameObjects) {
-            go.draw(g);
+    public void update(double deltaTime) {
+        for (GameObject gameObject : gameObjects) {
+            gameObject.draw(g2d);
         }
 
-        if (debugSelected) {
-            g.setColor(Color.BLUE);
-            DebugDraw.draw(g, world, 100);
+        mousePicker.update(world, camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()), 100);
+        world.update(deltaTime);
+
+    }
+
+    public void draw(FXGraphics2D g2d) {
+        g2d.setTransform(new AffineTransform());
+        g2d.clearRect(0, 0, (int) canvas.getWidth() , (int) canvas.getHeight());
+
+        g2d.setTransform(camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()));
+        g2d.scale(1, -1);
+
+        for (GameObject gameObject : gameObjects) {
+            gameObject.draw(g2d);
         }
 
-        g.setTransform(originalTransform);
+        if(debugSelected) {
+            g2d.setColor(Color.blue);
+            DebugDraw.draw(g2d, world, 100);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        Application.launch(Eindopdracht.class);
     }
 }
