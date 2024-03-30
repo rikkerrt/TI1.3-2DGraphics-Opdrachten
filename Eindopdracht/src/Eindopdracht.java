@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.dyn4j.dynamics.DetectResult;
+import org.dyn4j.dynamics.Force;
 import org.dyn4j.geometry.*;
 import org.dyn4j.geometry.Rectangle;
 import org.jfree.fx.*;
@@ -22,7 +23,9 @@ import org.jfree.fx.ResizableCanvas;
 
 public class Eindopdracht extends Application implements Resizable {
     private ResizableCanvas canvas;
-    private ArrayList<GameObject> gameObjects = new ArrayList<>();
+    private ArrayList<GameObject> enemies;
+    private ArrayList<GameObject> bullets;
+    private GameObject mainship;
     private boolean debugSelected;
     private World world;
     private Camera camera;
@@ -40,7 +43,15 @@ public class Eindopdracht extends Application implements Resizable {
             debugSelected =  showDebug.isSelected();
         });
 
-        borderPane.setTop(showDebug);
+        Button resetButton = new Button("Reset");
+        resetButton.setOnAction(e-> {
+            init();
+        });
+
+        HBox hBox = new HBox();
+        hBox.getChildren().addAll(showDebug, resetButton);
+
+        borderPane.setTop(hBox);
 
         canvas = new ResizableCanvas(e -> draw(e), borderPane);
         g2d = new FXGraphics2D(canvas.getGraphicsContext2D());
@@ -59,10 +70,15 @@ public class Eindopdracht extends Application implements Resizable {
 
             @Override
             public void handle(long now) {
+                boolean addbullet = false;
                 if (last == -1)
                     last = now;
-                update((now - last) / 1.0e9);
-                last = now;
+                if((now-last)/1.0e9 >= 1) {
+                    addbullet = true;
+                    last = now;
+                }
+                update((now - last) / 1.0e9, addbullet);
+//                last = now;
                 draw(g2d);
             }
         }.start();
@@ -71,6 +87,8 @@ public class Eindopdracht extends Application implements Resizable {
     public void init() {
         world = new World();
         world.setGravity(new Vector2(0, 0));
+        this.bullets = new ArrayList<>();
+        this.enemies = new ArrayList<>();
 
         Body floor = new Body();
         floor.addFixture(new Rectangle(20, 1));
@@ -79,18 +97,31 @@ public class Eindopdracht extends Application implements Resizable {
         world.addBody(floor);
 
         Body mainShip = new Body();
-        mainShip.addFixture(Geometry.createRectangle(4.75, 5.5));
-        mainShip.getTransform().setTranslation(0, -4.6);
+        mainShip.addFixture(Geometry.createRectangle(1, 1));
+        mainShip.getTransform().setTranslation(0, -3.5);
         mainShip.setMass(MassType.NORMAL);
+        mainShip.
         world.addBody(mainShip);
-        gameObjects.add(new GameObject("mainship.png", mainShip, new Vector2(0, 0), 1));
+        this.mainship = new GameObject("mainship.png", mainShip, new Vector2(0, 0), 0.2);
     }
 
-    public void update(double deltaTime) {
-        for (GameObject gameObject : gameObjects) {
+    public void update(double deltaTime, boolean addBullet) {
+        if(deltaTime % 2 ==0) {
+            Body bullet = new Body();
+            bullet.addFixture(Geometry.createRectangle(0.1, 0.25));
+            bullet.getTransform().setTranslation(mainship.getBody().getTransform().getTranslationX(),mainship.getBody().getTransform().getTranslationY() + 0.6);
+            bullet.setMass(MassType.NORMAL);
+            bullet.applyForce(new Force(new Vector2(0, 2)));
+
+            world.addBody(bullet);
+            bullets.add(new GameObject("/bullet.png", bullet, new Vector2(0,0), .05));
+        }
+
+        for (GameObject gameObject : bullets) {
             gameObject.draw(g2d);
         }
 
+        mainship.draw(g2d);
         mousePicker.update(world, camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()), 100);
         world.update(deltaTime);
 
@@ -103,9 +134,12 @@ public class Eindopdracht extends Application implements Resizable {
         g2d.setTransform(camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()));
         g2d.scale(1, -1);
 
-        for (GameObject gameObject : gameObjects) {
-            gameObject.draw(g2d);
-        }
+//        if(!bullets.isEmpty() {
+            for (GameObject gameObject : bullets) {
+                gameObject.draw(g2d);
+            }
+            mainship.draw(g2d);
+//        }
 
         if(debugSelected) {
             g2d.setColor(Color.blue);
