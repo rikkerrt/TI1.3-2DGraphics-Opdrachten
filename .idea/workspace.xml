@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eindopdracht/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eindopdracht/res/mainship.png" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/res/mainship.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +44,7 @@
     "Application.AngryBirds.executor": "Run",
     "Application.BlockDrag.executor": "Run",
     "Application.Colors.executor": "Run",
-    "Application.Eindopdracht.executor": "Run",
+    "Application.Eindopdracht.executor": "Debug",
     "Application.FadingImage.executor": "Run",
     "Application.GradientPaintExercise.executor": "Run",
     "Application.Graph.executor": "Run",
@@ -82,6 +81,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week4\001.Verlet\src" />
       <recent name="D:\huiswerk\Jaar1.5\p3\2D\2d\2d\Week3\004.Spotlight\res" />
@@ -178,6 +180,7 @@
       <workItem from="1711364169674" duration="74000" />
       <workItem from="1711486052262" duration="7883000" />
       <workItem from="1711716930190" duration="4475000" />
+      <workItem from="1711759539141" duration="4921000" />
     </task>
     <servers />
   </component>
