@@ -23,8 +23,10 @@ public class Enemy {
         Body enemySip = new Body();
         enemySip.addFixture(Geometry.createRectangle(0.68, 0.5));
         enemySip.getTransform().setTranslation(x, y);
-        enemySip.setMass(MassType.NORMAL);
+        enemySip.setMass(MassType.INFINITE);
+        enemySip.setUserData("enemy");
         world.addBody(enemySip);
+        this.body = enemySip;
         gameObject = new GameObject("/enemyShip.png", enemySip, new Vector2(0,40), 0.1);
     }
 
@@ -33,7 +35,7 @@ public class Enemy {
             return true;
         }
         hitsLeft--;
-        return true;
+        return false;
     }
 
     public void draw(FXGraphics2D g2d) {

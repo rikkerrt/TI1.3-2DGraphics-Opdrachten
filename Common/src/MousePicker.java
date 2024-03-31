@@ -49,9 +49,9 @@ public class MousePicker  {
 
 	public void update(World world, AffineTransform transform, double scale) {
 		if (mousePos == null) {
-			System.out.println(body);
+//			System.out.println(body);
 			if(body != null) {
-				System.out.println("Removing body");
+//				System.out.println("Removing body");
 				world.removeBody(body);
 				body = null;
 				joint = null;

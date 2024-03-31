@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8269f0-73cf-44b1-a794-a216efe19381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Eindopdracht/src/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eindopdracht/res/background1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eindopdracht/src/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/MousePicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/MousePicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/src/Eindopdracht.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eindopdracht/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eindopdracht/src/Enemy.java" afterDir="false" />
     </list>
+    <list id="978e1ec9-d9b0-4441-9831-71fe08cc47e0" name="Changes by Rik" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,48 +43,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.AngryBirds.executor": "Run",
-    "Application.BlockDrag.executor": "Run",
-    "Application.Colors.executor": "Run",
-    "Application.Eindopdracht.executor": "Debug",
-    "Application.FadingImage.executor": "Run",
-    "Application.GradientPaintExercise.executor": "Run",
-    "Application.Graph.executor": "Run",
-    "Application.House.executor": "Run",
-    "Application.Mirror.executor": "Run",
-    "Application.Moon.executor": "Run",
-    "Application.MovingCharacter.executor": "Run",
-    "Application.Rainbow.executor": "Run",
-    "Application.Screensaver.executor": "Run",
-    "Application.Spiral.executor": "Run",
-    "Application.Spirograph.executor": "Run",
-    "Application.Spotlight.executor": "Run",
-    "Application.VerletEngine.executor": "Run",
-    "Application.YingYang.executor": "Run",
-    "Application.testGraph.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "19",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Huiswerk/Jaar1.5/P3/new2d/TI1.3-2DGraphics-Opdrachten",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.AngryBirds.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BlockDrag.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Colors.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Eindopdracht.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FadingImage.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GradientPaintExercise.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Graph.executor&quot;: &quot;Run&quot;,
+    &quot;Application.House.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mirror.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Moon.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MovingCharacter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Rainbow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Screensaver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spiral.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spirograph.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spotlight.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VerletEngine.executor&quot;: &quot;Run&quot;,
+    &quot;Application.YingYang.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testGraph.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rick/Downloads&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -180,7 +185,11 @@
       <workItem from="1711364169674" duration="74000" />
       <workItem from="1711486052262" duration="7883000" />
       <workItem from="1711716930190" duration="4475000" />
-      <workItem from="1711759539141" duration="4921000" />
+      <workItem from="1711759539141" duration="5036000" />
+      <workItem from="1711817058466" duration="626000" />
+      <workItem from="1711894695583" duration="18391000" />
+      <workItem from="1711917282153" duration="1872000" />
+      <workItem from="1711919630844" duration="18000" />
     </task>
     <servers />
   </component>
@@ -190,7 +199,22 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="testBody.transform0.y" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TI1_3_2DGraphics_Opdrachten$Eindopdracht.ic" NAME="Eindopdracht Coverage Results" MODIFIED="1711200255131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TI1_3_2DGraphics_Opdrachten$Eindopdracht.ic" NAME="Eindopdracht Coverage Results" MODIFIED="1711913532556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

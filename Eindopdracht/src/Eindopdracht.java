@@ -1,12 +1,15 @@
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Particle;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.dyn4j.collision.Filter;
+import org.dyn4j.dynamics.DetectResult;
 import org.dyn4j.dynamics.Force;
 import org.dyn4j.geometry.*;
 import org.dyn4j.geometry.Rectangle;
@@ -14,24 +17,32 @@ import org.jfree.fx.*;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import org.dyn4j.dynamics.Body;
 import org.dyn4j.dynamics.World;
 import org.jfree.fx.FXGraphics2D;
 import org.jfree.fx.ResizableCanvas;
 
+import javax.imageio.ImageIO;
+
 public class Eindopdracht extends Application implements Resizable {
     private ResizableCanvas canvas;
     private ArrayList<Enemy> enemies;
-    private ArrayList<GameObject> bullets;
+    private ArrayList<Bullet> bullets;
     private GameObject mainship;
     private boolean debugSelected;
     private World world;
     private Camera camera;
     private MousePicker mousePicker;
     private FXGraphics2D g2d;
-    private Filter filter;
+    private double timer;
+    private BufferedImage background;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -53,7 +64,7 @@ public class Eindopdracht extends Application implements Resizable {
         hBox.getChildren().addAll(showDebug, resetButton);
 
         borderPane.setTop(hBox);
-
+        background = ImageIO.read(Objects.requireNonNull(getClass().getResource("background1.jpg")));
         canvas = new ResizableCanvas(e -> draw(e), borderPane);
         g2d = new FXGraphics2D(canvas.getGraphicsContext2D());
 
@@ -63,7 +74,7 @@ public class Eindopdracht extends Application implements Resizable {
         mousePicker = new MousePicker(canvas);
 
         stage.setScene(new Scene(borderPane, 1920, 1080));
-        stage.setTitle("Hello Joints");
+        stage.setTitle("Space invaders");
         stage.show();
 
         new AnimationTimer() {
@@ -74,12 +85,7 @@ public class Eindopdracht extends Application implements Resizable {
                 boolean addbullet = false;
                 if (last == -1)
                     last = now;
-                if ((now - last) / 1.0e9 >= 1) {
-                    addbullet = true;
-                    last = now;
-                }
                 update((now - last) / 1.0e9, addbullet);
-//                last = now;
                 draw(g2d);
             }
         }.start();
@@ -87,57 +93,75 @@ public class Eindopdracht extends Application implements Resizable {
 
     public void init() {
         world = new World();
+
+
         world.setGravity(new Vector2(0, 0));
         this.bullets = new ArrayList<>();
         this.enemies = new ArrayList<>();
-
-        Body floor = new Body();
-        floor.addFixture(new Rectangle(20, 1));
-        floor.getTransform().setTranslation(0, -10);
-        floor.setMass(MassType.INFINITE);
-        world.addBody(floor);
 
         Body mainShip = new Body();
         mainShip.addFixture(Geometry.createRectangle(1, 1));
         mainShip.getTransform().setTranslation(0, -3.5);
         mainShip.setMass(MassType.NORMAL);
+        mainShip.setUserData("player");
         world.addBody(mainShip);
         this.mainship = new GameObject("mainship.png", mainShip, new Vector2(0, 0), 0.2);
 
-        for (int x = 0; x < 1; x++) {
-            for (int y = 0; y < 1; y++) {
-                enemies.add(new Enemy(world ,0, 0));
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 3; y++) {
+                enemies.add(new Enemy(world, -5 + x * 1, 3 + y * 1));
             }
         }
     }
 
     public void update(double deltaTime, boolean addBullet) {
-        if (deltaTime % 2 == 0) {
-            Body bullet = new Body();
-            bullet.addFixture(Geometry.createRectangle(0.1, 0.25));
-            bullet.getTransform().setTranslation(mainship.getBody().getTransform().getTranslationX(), mainship.getBody().getTransform().getTranslationY() + 0.6);
-            bullet.setMass(MassType.NORMAL);
-            bullet.applyForce(new Force(new Vector2(0, 2)));
-            world.addBody(bullet);
+        world.update(deltaTime);
 
-            bullets.add(new GameObject("/bullet.png", bullet, new Vector2(0, 0), .05));
+        if (timer % 50 == 0) {
+            bullets.add(new Bullet(mainship, world));
         }
 
-        for (GameObject bullet : bullets) {
-            for (Enemy enemy : enemies) {
-                if (bullet.getBody().getContacts(true) == null) {
-                    if (enemy.noHitsLeft()) {
-                        enemies.remove(enemy);
-                        bullets.remove(bullet);
+        ArrayList<Bullet> bulletsCopy = new ArrayList<>(bullets);
+
+        for (Bullet bullet : bullets) {
+            ArrayList<DetectResult> result = bullet.hasHit();
+//                for (Enemy enemy : enemies) {
+//                    System.out.println(bullet.getBody().isInContact(enemy.getBody()));
+//                }
+            if (!result.isEmpty()) {
+                for (DetectResult result1 : result) {
+                    Body resultBody = result1.getBody();
+                    resultBody.setAsleep(false);
+                    resultBody.setAutoSleepingEnabled(false);
+
+                    if (resultBody.getUserData() == null)
+                        continue;
+
+                    if (resultBody.getUserData().equals("enemy") && !resultBody.equals(bullet.getBody())) {
+                        bulletsCopy.remove(bullet);
+                        System.out.println(result1);
+                        world.removeBody(bullet.getBody());
+
+                        //check for enemy, if found remove.
+                        for (int i = 0; i < enemies.size(); i++) {
+                            Enemy enemy = enemies.get(i);
+                            if (enemy.getBody().equals(resultBody)) {
+                                if(enemy.noHitsLeft()) {
+                                    removeEnemy(enemy);
+                                    break;
+                                }
+
+                            }
+                        }
                     }
+
                 }
             }
         }
-
         mainship.draw(g2d);
         mousePicker.update(world, camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()), 100);
-        world.update(deltaTime);
-
+        bullets = bulletsCopy;
+        timer++;
     }
 
     public void draw(FXGraphics2D g2d) {
@@ -147,8 +171,13 @@ public class Eindopdracht extends Application implements Resizable {
         g2d.setTransform(camera.getTransform((int) canvas.getWidth(), (int) canvas.getHeight()));
         g2d.scale(1, -1);
 
-        for (GameObject gameObject : bullets) {
-            gameObject.draw(g2d);
+
+//        g2d.drawImage(background, 0, 0, null);
+        g2d.setPaint(new TexturePaint(background, new Rectangle2D.Double(0,canvas.getHeight(), background.getWidth()/2.0, background.getHeight()/2.0)));
+
+
+        for (Bullet bullet : bullets) {
+            bullet.draw(g2d);
         }
 
         for (Enemy enemy : enemies) {
@@ -162,10 +191,17 @@ public class Eindopdracht extends Application implements Resizable {
             g2d.setColor(Color.blue);
             DebugDraw.draw(g2d, world, 100);
         }
+
+
     }
 
 
     public static void main(String[] args) {
         Application.launch(Eindopdracht.class);
+    }
+
+    public void removeEnemy(Enemy enemy) {
+        enemies.remove(enemy);
+        world.removeBody(enemy.getBody());
     }
 }
